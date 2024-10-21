@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Health Assistant Chatbot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F5EFFF; /* Lightest color as the background */
+      }
+      .hero {
+        background: url('./rb_1385.png') no-repeat center center/cover, linear-gradient(135deg, #A594F9 0%, #CDC1FF 100%);
+        min-height: 100vh;
+        color: #3B1E54; /* Text color */
+        position: relative;
+      }
+      .hero-text {
+        background-color: rgba(255, 255, 255, 0.9); /* Light white background with opacity */
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .hero h2 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        text-align: justify;
+      }
+      .about, .chatbot, .team {
+        background-color: #E5D9F2; /* Section background color */
+        color: #3B1E54; /* Darker text color */
+      }
+      .features {
+        background-color: #F5EFFF; /* Neutral background for the features section */
+      }
+      .features img {
+        width: 100%;
+        height: auto;
+      }
+      .chatbot button {
+        background-color: #7E60BF; /* Primary button color */
+        color: #FFFFFF; /* Light text color */
+        border: none;
+      }
+      .chatbot button:hover {
+        background-color: #E4B1F0; /* Slightly lighter shade on hover */
+      }
+      .team .member-info {
+        background: #7E60BF; /* Medium background for team members */
+        color: #FFFFFF; /* Light text color */
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+      .list-group-item {
+        background-color: #E5D9F2; /* List item background */
+        border: none;
+        color: #3B1E54; /* Text color */
+      }
+      /* Chatbot Modal Styles */
+      .modal-content {
+        background-color: #F5EFFF;
+        border-radius: 8px;
+      }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <div class="hero-text">
+          <h1>Welcome to Health Assistant</h1>
+          <h2>Leverage AI to get medical recommendations and advice based on your symptoms and medical history.</h2>
+          <div>
+            <a href="#about" class="btn btn-primary btn-lg d-inline-flex align-items-center justify-content-center align-self-center" style="background-color: #7E60BF; border: none;">
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <h3>About Our Chatbot</h3>
+        <p>Our AI-powered chatbot helps you find hospitals and predict potential diseases based on symptoms. It is designed to provide accurate recommendations and improve patient outcomes through personalized AI analysis.</p>
+      </div>
+      <div class="col-lg-3">
+        <img src="./rb_2151106563.png" class="img-fluid" alt="About AI Bot" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chatbot Section -->
+<section id="chatbot" class="chatbot text-center py-5">
+  <div class="container">
+    <h3>Need Assistance? Talk to Our Bot</h3>
+    <button id="open-chatbot" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#chatbotModal">Chat with Watson</button>
+  </div>
+</section>
+
+<!-- Chatbot Modal -->
+<div class="modal fade" id="chatbotModal" tabindex="-1" aria-labelledby="chatbotModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chatbotModalLabel">Health Assistant Chatbot</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://web-chat.global.assistant.watson.appdomain.cloud/preview.html?integrationID=2375736a-aedb-4222-96cc-9d044116b7d3&region=us-south&serviceInstanceID=2458b809-0bbf-4133-9724-3ae6e6f2c3dc" width="100%" height="500px" style="border: none;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<section id="features" class="features py-5 bg-light">
+  <div class="container">
+    <header class="section-header text-center mb-5">
+      <h2>Features</h2>
+      <p>What makes our assistant unique?</p>
+    </header>
+    <div class="row d-flex justify-content-end">
+      <div class="col-lg-4 mx-5">
+        <img src="./rb_2151106570.png" class="img-fluid" alt="Features" />
+      </div>
+      <div class="col-lg-6 d-flex justify-content-end align-items-center mx-5">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <h3>Accurate Analysis</h3>
+            <p>Provides precise medical insights based on your inputs.</p>
+          </li>
+          <li class="list-group-item">
+            <h3>Personalized Tips</h3>
+            <p>Get health tips tailored specifically to your needs.</p>
+          </li>
+          <li class="list-group-item">
+            <h3>Hospital Recommendations</h3>
+            <p>Offers nearby hospital suggestions based on your symptoms.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team py-5">
+  <div class="container">
+    <header class="section-header text-center mb-5">
+      <h2>Meet Our Team</h2>
+      <p>Our hard-working and dedicated team</p>
+    </header>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="member-info">
+          <h4>Vinesh Rathod</h4>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="member-info">
+          <h4>Pradnya Bhoir</h4>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="member-info">
+          <h4>Ashwini Mayekar</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
